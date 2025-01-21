@@ -173,7 +173,7 @@ SELECT f.title, f.rental_rate
 FROM film f
 WHERE f.rental_rate > (SELECT AVG(rental_rate) FROM film)
 ORDER BY f.rental_rate DESC;
-
+---Películas que se alquilan por encima del precio medio comparativa
 SELECT f.title, f.rental_rate, (SELECT AVG(rental_rate) FROM film) AS precio_medio
 FROM film f
 WHERE f.rental_rate > (SELECT AVG(rental_rate) FROM film)

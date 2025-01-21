@@ -44,6 +44,10 @@ Para ejecutar este proyecto, se ha usado las herramientas y dependencias descrit
   * **No hay actores sin películas:** La base de datos muestra que cada actor registrado está vinculado al menos a una película, lo que garantiza la integridad de esta relación.  
 * **Películas sin actores:**  
   * Se identificaron películas (3) que no tienen actores registrados. Esto puede deberse a datos incompletos o películas que no requieren actores (documentales, animaciones, etc.).
+* **Idioma Original:**
+  * El análisis de la consulta 4 revela que el campo original_language_id de la tabla film contiene valores NULL para todas las películas. Esto significa que no se puede determinar si el idioma de una película coincide con su idioma original, ya que esta información no está registrada o no fue completada en la base de datos. Este hallazgo sugiere que la base de datos podría estar incompleta o desactualizada en este aspecto, lo que limita la posibilidad de realizar análisis más profundos relacionados con idiomas de origen y traducciones.
+
+La falta de información sobre el idioma original también podría tener implicaciones en la gestión de inventarios y estrategias de marketing, especialmente si el sistema necesita diferenciar entre versiones originales y dobladas de las películas. Una recomendación sería realizar una auditoría de la base de datos para identificar y corregir estas lagunas, asegurando que los datos clave estén disponibles para futuros análisis y para mejorar la precisión de las consultas realizadas.
 
 ### **Alquileres**
 
